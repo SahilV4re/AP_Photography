@@ -91,7 +91,7 @@ export default function ServicesPage() {
                 <h2 className="text-3xl font-medium mb-4">{service.title}</h2>
                 <p className="text-muted-foreground mb-6">{service.description}</p>
                 
-                <h3 className="text-xl font-medium mb-3">What's Included:</h3>
+                <h3 className="text-xl font-medium mb-3">What&apos;s Included:</h3>
                 <ul className="space-y-2 mb-6">
                   {service.features.map((feature, i) => (
                     <li key={i} className="flex items-center">
@@ -104,7 +104,8 @@ export default function ServicesPage() {
                 </ul>
                 
                 <Button asChild>
-                  <Link href="/contact">Book This Service</Link>
+                <Link href={`/payment?service=${service.id}`}>Book This Service</Link>
+
                 </Button>
               </div>
             </div>
@@ -116,7 +117,7 @@ export default function ServicesPage() {
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-3xl font-medium mb-4">Custom Photography Packages</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto mb-8">
-            Don't see exactly what you need? We offer custom photography packages 
+            Don&apos;t see exactly what you need? We offer custom photography packages 
             tailored to your specific requirements. Contact us to discuss your project.
           </p>
           <Button size="lg" asChild>
