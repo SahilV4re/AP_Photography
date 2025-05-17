@@ -50,7 +50,11 @@ export default function PaymentPage() {
     e.preventDefault();
 
     const txnid = 'Txn' + Date.now();
-    const productinfo = serviceData[selectedService]?.title || 'Photography Service';
+    const productinfo =
+  selectedService in serviceData
+    ? serviceData[selectedService as keyof typeof serviceData]?.title
+    : 'Photography Service';
+
 
     const res = await fetch('/api/generate-hash', {
       method: 'POST',
@@ -183,8 +187,12 @@ export default function PaymentPage() {
         </div>
 
         <div className="bg-gray-100 p-6 rounded-lg border">
-          <h3 className="text-xl font-bold mb-2">{serviceData[selectedService]?.title}</h3>
-          <p className="text-gray-700">{serviceData[selectedService]?.description}</p>
+        <h3 className="text-xl font-bold mb-2">
+    {serviceData[selectedService as keyof typeof serviceData]?.title}
+  </h3>
+  <p className="text-gray-700">
+    {serviceData[selectedService as keyof typeof serviceData]?.description}
+  </p>
 
           <div className="mt-6">
             <h4 className="text-lg font-semibold mb-2">Why Choose Us?</h4>
