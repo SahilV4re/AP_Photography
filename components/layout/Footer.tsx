@@ -1,5 +1,9 @@
 import Link from 'next/link';
 import { Camera, Instagram, Facebook, Mail, Phone, MapPin } from 'lucide-react';
+import Cancellation from '../PaymentHelper/Cancellation&Refund';
+import Privacy from '../PaymentHelper/PrivacyPolicy';
+import Shipping from '../PaymentHelper/Shipping&Exchange';
+import Terms from '../PaymentHelper/termsandcondition';
 
 const Footer = () => {
   return (
@@ -109,12 +113,20 @@ const Footer = () => {
             © {new Date().getFullYear()} AP Photography. All rights reserved.
           </p>
           <div className="mt-4 md:mt-0 text-sm text-muted-foreground">
-            <Link href="/privacy-policy" className="hover:text-accent transition-colors">
+            <Link href="/privacypolicy" className="hover:text-accent transition-colors">
               Privacy Policy
             </Link>
             <span className="mx-2">·</span>
-            <Link href="/terms" className="hover:text-accent transition-colors">
+            <Link href="/T&C" className="hover:text-accent transition-colors">
               Terms of Service
+            </Link>
+            <span className="mx-2">·</span>
+            <Link href="/cancellation" className="hover:text-accent transition-colors">
+              Cancellation & Refund
+            </Link>
+            <span className="mx-2">·</span>
+            <Link href="/exchange" className="hover:text-accent transition-colors">
+              Shipping & Exchange
             </Link>
           </div>
         </div>
