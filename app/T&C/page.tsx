@@ -2,7 +2,7 @@ import React from 'react';
 
 const Terms: React.FC = () => (
     <div className="max-w-4xl mx-auto px-6 py-12 pt-20">
-        <div className="bg-gray-200 rounded-xl shadow-sm p-8">
+        <div className="bg-gray-100 rounded-xl shadow-sm p-8">
     <h2 className="text-4xl font-bold font-[var(--font-playfair)] mb-8 text-left">
       Terms and Conditions
     </h2>
