@@ -1,9 +1,9 @@
 import React from 'react';
 
 const PrivacyPolicy: React.FC = () => (
-  <div className="max-w-4xl mx-auto px-6 py-20">
+  <div className="max-w-8xl mx-auto px-6 py-20">
     <div className="bg-gray-100 rounded-xl p-8 shadow-sm">
-    <h2 className="text-4xl font-bold font-[var(--font-playfair)] mb-8 text-left">
+    <h2 className="text-4xl font-bold font-[var(--font-playfair)] mb-8 text-center">
       Privacy Policy
     </h2>
 
